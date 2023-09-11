@@ -1,0 +1,67 @@
+Title: Indigency "Flowchart"
+Author: Leah Marszalek
+Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">Indigency "Flowchart"</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/level/2/#mission_p1">class project</a>. You should not rely on it as a source of legal information!</b></p>
+<p>Answer the following questions to see if you qualify for appointed counsel in Kansas.</p>
+    
+Q(household): How many people are in their household?
+A: 1
+	Q(income1): Is their combined household income and liquid assets equal less than $14,580?
+	A: Yes
+		Q(income1yes):GOTO:eligible
+	A: No
+		Q(income1no):GOTO:ineligible
+A: 2
+	Q(income2): Is their combined household income and liquid assets equal less than $19,720?
+	A: Yes
+		Q(income2yes):GOTO:eligible
+	A: No
+		Q(income2no):GOTO:ineligible
+A: 3
+	Q(income3): Is their combined household income and liquid assets equal less than $24,860?
+	A: Yes
+		Q(income3yes):GOTO:eligible
+	A: No
+		Q(income3no):GOTO:ineligible
+A: 4
+	Q(income4): Is their combined household income and liquid assets equal less than $30,000?
+	A: Yes
+		Q(income4yes):GOTO:eligible
+	A: No
+		Q(income4no):GOTO:ineligible
+A: 5
+	Q(income5): Is their combined household income and liquid assets equal less than $35,140?
+	A: Yes
+		Q(income5yes):GOTO:eligible
+	A: No
+		Q(income5no):GOTO:ineligible
+A: 6
+	Q(income6): Is their combined household income and liquid assets equal less than $40,280?
+	A: Yes
+		Q(income6yes):GOTO:eligible
+	A: No
+		Q(income6no):GOTO:ineligible
+A: 7
+	Q(income7): Is their combined household income and liquid assets equal less than $45,420?
+	A: Yes
+		Q(income7yes):GOTO:eligible
+	A: No
+		Q(income7no):GOTO:ineligible
+A: 8
+	Q(income8): Is their combined household income and liquid assets equal less than $50,560?
+	A: Yes
+		Q(income8yes):GOTO:eligible
+	A: No
+		Q(income8no):GOTO:ineligible
+A: More than 8
+	Q(incomemore8): Is their combined household income and liquid assets equal less than $50,560 + $5,140 for each additional person in the family/household? Example: 10 in household = $60,840 ($50,560 + $5,140x2)
+
+	A: Yes
+		Q(incomemore8yes):GOTO:eligible
+	A: No
+		Q(incomemore8no):GOTO:ineligible
+
+Q(eligible): Eligible!
+Q(ineligible): Ineligible!
