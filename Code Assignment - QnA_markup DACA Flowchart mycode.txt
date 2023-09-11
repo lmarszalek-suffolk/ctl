@@ -1,0 +1,79 @@
+Title: DACA "Flowchart"
+Author: Leah Marszalek
+Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">DACA "Flowchart"</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/#mission">class project</a>. You should not rely on it as a source of legal information!</b></p>
+<p>Answer the following questions to see if someone qualifies for DACA.</p>
+
+Q(birthday): Is their birthday on or after June 16, 1981?
+A: Yes
+	Q(yesbirthday):GOTO:enter
+A: No
+	Q(nobirthday):GOTO:NO
+
+Q(enter): Did they enter the United States before 16th bday?
+A: No
+	Q(noenter):GOTO:NO
+A: Yes
+	Q(yesenter):GOTO:inUS
+
+Q(inUS): Were they in the United States on June 15, 2012?
+A: No
+	Q(noinUS):GOTO:NO
+A:Yes
+	Q(yesinUS):GOTO:continuously
+
+Q(continuously): Have they continuously resided in the United States since June 15, 2007?
+A: No
+	Q(nocontinuously):GOTO:NO
+A: Yes
+	Q(yescontinuously):GOTO:outstatus
+
+Q(outstatus): Were they out of status on June 15, 2012?
+A: No
+	Q(nooutstatus):GOTO:NO
+A: Yes
+	Q(yesoutstatus):GOTO:felonysignificant
+
+Q(felonysignificant): Have they been convicted of a felony or a significant misdemeanor?
+A: No
+	Q(nofelonysignificant):GOTO:misdemeanor
+A: Yes
+	Q(yesfelonysignificant):GOTO:NO
+
+Q(misdemeanor): Have they been convicted of more than one misdemeanor?
+A: No
+	Q(nomisdemeanor):GOTO:nationalsecurity
+A: Yes
+	Q(yesmisdemeanor):GOTO:NO
+
+Q(nationalsecurity): Do they pose a threat to national security or public safety?
+A: No
+	Q(nonationalsecurity):GOTO:currentschool
+A: Yes
+	Q(yesnationalsecurity):GOTO:NO
+
+Q(currentschool): Are they currently in school?
+A: No
+	Q(diplomaGED): Do they have a HS diploma or GED?
+	A: Yes
+		Q(yesdiploma):GOTO:15yrsold
+	A: No
+		Q(discharge): Are they an honorably discharged veteran of the Coast Guard or Armed Forces of the United States?
+		A: Yes
+			Q(yesdischarge):GOTO:15yrsold
+		A: No
+			Q(nodischarge):GOTO:wait
+A: Yes
+	Q(15yrsold): Are they 15 or older?
+	A: Yes
+		Q(eligible): Eligible!
+	A: No
+		Q(no15yrsold): Currently in removal proceedings, or have a final removal or VD order?
+		A: Yes
+			Q(yesremoval):GOTO:eligible
+		A: No
+			Q(wait): Wait.
+
+Q(NO): Ineligible!
